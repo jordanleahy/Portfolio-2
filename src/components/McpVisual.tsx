@@ -22,7 +22,7 @@ export function McpVisual() {
         let i = 0;
         const interval = setInterval(() => {
             if (i < sequence.length) {
-                setLogs(prev => [...prev.slice(-4), sequence[i]]); // Keep last 5 lines
+                setLogs(prev => [...prev.slice(-5), sequence[i]]); // Keep last 6 lines
                 i++;
             } else {
                 // simple loop or stop
@@ -47,7 +47,7 @@ export function McpVisual() {
                     </div>
                     <span className="ml-2">jordan-dev-environment</span>
                 </div>
-                <div className="px-2 py-1 bg-primary/10 rounded text-primary text-[10px] uppercase tracking-wider">
+                <div className="px-2 py-1 bg-secondary/10 rounded text-secondary text-[10px] uppercase tracking-wider border border-secondary/20">
                     System Online
                 </div>
             </div>
@@ -58,8 +58,8 @@ export function McpVisual() {
                 {/* Visual Graph Side */}
                 <div className="hidden md:flex flex-col items-center justify-center relative">
                     {/* Center Code Node */}
-                    <div className="absolute z-10 w-16 h-16 bg-blue-500/10 border border-blue-500/30 rounded-full flex items-center justify-center animate-pulse">
-                        <Code className="w-8 h-8 text-blue-400" />
+                    <div className="absolute z-10 w-16 h-16 bg-primary/10 border border-primary/30 rounded-full flex items-center justify-center animate-pulse shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+                        <Code className="w-8 h-8 text-primary" />
                     </div>
 
                     {/* Satellites */}
@@ -74,11 +74,11 @@ export function McpVisual() {
                         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                         className="w-72 h-72 border border-dashed border-white/5 rounded-full absolute"
                     >
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-full border border-pink-500/30">
-                            <Figma className="w-5 h-5 text-pink-500" />
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black p-2 rounded-full border border-primary/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]">
+                            <Figma className="w-5 h-5 text-primary" />
                         </div>
-                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-black p-2 rounded-full border border-green-500/30">
-                            <Database className="w-5 h-5 text-green-500" />
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-black p-2 rounded-full border border-secondary/30 shadow-[0_0_10px_rgba(34,197,94,0.2)]">
+                            <Database className="w-5 h-5 text-secondary" />
                         </div>
                     </motion.div>
 
@@ -89,6 +89,9 @@ export function McpVisual() {
                 <div className="flex flex-col gap-2 relative">
                     {logs.map((log, i) => {
                         if (!log) return null;
+                        const isSuccess = log.includes("[SUCCESS]") || log.includes("[READY]");
+                        const isAgent = log.includes("[AGENT]");
+
                         return (
                             <motion.div
                                 key={i}
@@ -96,8 +99,8 @@ export function McpVisual() {
                                 animate={{ opacity: 1, x: 0 }}
                                 className="flex items-start gap-2 text-white/70"
                             >
-                                <span className="text-primary mt-1">➜</span>
-                                <span className={log.includes("[") ? "text-primary" : "text-white/60"}>
+                                <span className="text-secondary mt-1">➜</span>
+                                <span className={isSuccess ? "text-secondary" : isAgent ? "text-primary" : "text-white/60"}>
                                     {log}
                                 </span>
                             </motion.div>
@@ -106,13 +109,13 @@ export function McpVisual() {
                     <motion.div
                         animate={{ opacity: [0, 1, 0] }}
                         transition={{ duration: 0.8, repeat: Infinity }}
-                        className="w-2 h-4 bg-primary mt-1"
+                        className="w-2 h-4 bg-secondary mt-1"
                     />
                 </div>
             </div>
 
             {/* Decorative Scanlines */}
-            <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-20 bg-[length:100%_4px,3px_100%] opacity-20" />
+            <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(139,92,246,0.03),rgba(34,197,94,0.02),rgba(0,0,255,0.03))] z-20 bg-[length:100%_4px,3px_100%] opacity-20" />
         </div>
     );
 }

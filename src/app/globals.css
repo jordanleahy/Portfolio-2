@@ -4,23 +4,27 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-space);
 
-  --color-background: #050505;
-  --color-foreground: #ededed;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
   
-  --color-primary: #3b82f6; 
+  --color-primary: #8b5cf6; 
   --color-primary-foreground: #ffffff;
+
+  --color-secondary: #22c55e;
+  --color-secondary-foreground: #000000;
 
   --color-accent: #8b5cf6;
   --color-accent-foreground: #ffffff;
 
-  --color-muted: #1a1a1a;
+  --color-muted: #111111;
   --color-muted-foreground: #a3a3a3;
 
-  --color-border: #262626;
+  --color-border: #333333;
   
   --animate-fade-in: fade-in 0.5s ease-out;
   --animate-slide-up: slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   --animate-reveal: reveal 1s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-pulse-slow: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes fade-in {
     from { opacity: 0; }
@@ -33,6 +37,10 @@
   @keyframes reveal {
     from { clip-path: inset(0 100% 0 0); }
     to { clip-path: inset(0 0 0 0); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
   }
 }
 

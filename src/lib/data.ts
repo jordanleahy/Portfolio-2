@@ -17,7 +17,7 @@ export const SITE_DATA = {
         {
             id: "case1-updated",
             title: "Redesigned clinical diagnostics to boost accuracy 60%",
-            subtitle: "SmarterDx:",
+            subtitle: "SmarterDx",
             description: "I transformed how clinical teams validate Sepsis diagnoses—ensuring hospitals get paid for the critical care they actually delivered.",
             tags: ["RCM", "LLM", "ICD-10", "Sepsis", "Clinical AI"],
             image: "https://www.jordanleahy.com/case1-updated.png",
