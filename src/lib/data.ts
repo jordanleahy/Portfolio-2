@@ -3,7 +3,12 @@ export const SITE_DATA = {
         title: "Designing with Agents & Clinical Intelligence",
         subtitle: "I architect workflows, not just screens. Leveraging Custom MCPs, Cursor, Claude or Antigravity, and Figma to aggregate intelligence and build high-velocity clinical applications.",
         cta: "Explore My System",
-        email: "jordanwilliamleahy@gmail.com"
+        email: "jordanwilliamleahy@gmail.com",
+    },
+    author: {
+        name: "Jordan Leahy",
+        role: "Product Design Engineer",
+        bio: "I architect workflows, not just screens. I combine design thinking with technical execution, leveraging Custom MCPs, Cursor, and AI to build high-velocity clinical applications. I believe in 'Product Design Engineering'—closing the gap between Figma and production code."
     },
     experience: [
         { name: "SmarterDx", logo: "https://wgwmzfbnkovumqcvsxgd.supabase.co/storage/v1/object/public/images//smarterdx.jpeg" },
