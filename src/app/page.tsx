@@ -3,7 +3,6 @@ import { WorkGrid } from "@/components/WorkGrid";
 import { Testimonials } from "@/components/Testimonials";
 import { Footer } from "@/components/Footer";
 import { LogoTicker } from "@/components/LogoTicker";
-import { BlogSection } from "@/components/BlogSection";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <WorkGrid />
-      <BlogSection />
       <Testimonials />
       <Footer />
     </main>

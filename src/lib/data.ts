@@ -106,6 +106,7 @@ export const SITE_DATA = {
             locked: false,
             password: "design2025",
             slug: "prescriber-point",
+            comingSoon: true,
             team: {
                 role: "Senior UX Designer",
                 responsibilities: [
@@ -177,6 +178,7 @@ export const SITE_DATA = {
             locked: false,
             password: "design2025",
             slug: "definitive-healthcare",
+            comingSoon: true,
             team: {
                 role: "Lead Product Designer",
                 responsibilities: [

@@ -29,9 +29,7 @@ export function Header() {
 
     const navLinks = [
         { name: "Work", href: "/#work" },
-        { name: "Blog", href: "/#blog" },
-        { name: "About", href: "/#about" }, // Placeholder anchor
-        { name: "Contact", href: `mailto:${SITE_DATA.hero.email}` },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/jordanleahy/", external: true },
     ];
 
     return (
@@ -55,7 +53,9 @@ export function Header() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
+                                target={link.external ? "_blank" : undefined}
+                                rel={link.external ? "noopener noreferrer" : undefined}
+                                className="text-sm font-mono tracking-widest text-muted-foreground hover:text-white transition-colors uppercase"
                             >
                                 {link.name}
                             </Link>
@@ -95,9 +95,12 @@ export function Header() {
                                     transition={{ delay: 0.1 * i + 0.3 }}
                                 >
                                     <Link
+                                        key={link.name}
                                         href={link.href}
+                                        target={link.external ? "_blank" : undefined}
+                                        rel={link.external ? "noopener noreferrer" : undefined}
                                         onClick={() => setIsOpen(false)}
-                                        className="text-5xl font-bold font-display uppercase tracking-tighter hover:text-primary transition-colors"
+                                        className="block text-4xl font-display font-medium text-white hover:text-primary transition-colors"
                                     >
                                         {link.name}
                                     </Link>

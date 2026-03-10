@@ -1,14 +1,15 @@
 "use client";
 
 import { SITE_DATA } from "@/lib/data";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Lock, ArrowUpRight } from "lucide-react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { Lock, ArrowUpRight, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function ProjectCard({ project, index }: { project: any, index: number }) {
     const ref = useRef(null);
+    const [showModal, setShowModal] = useState(false);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start end", "end start"]
@@ -26,7 +27,16 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
             transition={{ duration: 0.8 }}
             className="group relative w-full mb-32 last:mb-0"
         >
-            <Link href={`/work/${project.slug}`} className="block relative">
+            <Link
+                href={project.comingSoon ? "#" : `/work/${project.slug}`}
+                onClick={(e) => {
+                    if (project.comingSoon) {
+                        e.preventDefault();
+                        setShowModal(true);
+                    }
+                }}
+                className="block relative"
+            >
                 {/* Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
@@ -92,6 +102,58 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
                     ))}
                 </div>
             </Link>
+
+            <AnimatePresence>
+                {showModal && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); setShowModal(false); }}
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            className="relative z-[101] w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl overflow-hidden"
+                        >
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
+
+                            <button
+                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); setShowModal(false); }}
+                                className="absolute top-6 right-6 text-muted-foreground hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+
+                            <div className="space-y-6 mt-2">
+                                <div className="inline-block px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-xs font-mono uppercase tracking-widest">
+                                    Coming Soon
+                                </div>
+
+                                <h3 className="text-3xl md:text-4xl font-bold text-white font-display leading-tight">
+                                    {project.subtitle}
+                                </h3>
+
+                                <p className="text-lg text-muted-foreground leading-relaxed">
+                                    I'm currently putting the finishing touches on this case study. Check back soon for a deep dive into how we transformed the {project.subtitle} product experience.
+                                </p>
+
+                                <div className="pt-4">
+                                    <button
+                                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setShowModal(false); }}
+                                        className="w-full py-4 bg-white text-black rounded-xl font-bold hover:bg-neutral-200 transition-colors"
+                                    >
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </motion.div>
     );
 }
