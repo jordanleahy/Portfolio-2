@@ -29,6 +29,10 @@ export function Header() {
 
     const navLinks = [
         { name: "Work", href: "/#work" },
+        { name: "About", href: "/about" },
+        { name: "Services", href: "/services" },
+        { name: "Blog", href: "/#blog" },
+        { name: "Contact", href: "/contact" },
         { name: "LinkedIn", href: "https://www.linkedin.com/in/jordanleahy/", external: true },
     ];
 
