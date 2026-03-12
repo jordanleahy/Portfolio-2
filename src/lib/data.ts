@@ -25,7 +25,7 @@ export const SITE_DATA = {
             subtitle: "SmarterDx",
             description: "I transformed how clinical teams validate Sepsis diagnoses—ensuring hospitals get paid for the critical care they actually delivered.",
             tags: ["RCM", "LLM", "ICD-10", "Sepsis", "Clinical AI"],
-            image: "https://www.jordanleahy.com/case1-updated.png",
+            image: "/case-studies/case1-updated.png",
             locked: false,
             password: "design2025",
             slug: "smarter-dx-iteration",
