@@ -55,7 +55,7 @@ export const SITE_DATA = {
                     "Clinical validation studies"
                 ],
                 tools: ["Figma", "FigJam", "Product Discovery", "Jira"],
-                image: "/case-studies/team-photo.jpg"
+                image: "/case-studies/team-photo.png"
             },
             sections: [
                 {
@@ -63,7 +63,7 @@ export const SITE_DATA = {
                     label: "The Challenge",
                     title: "The Validation Gap",
                     text: "1. The Context: \n• Each patient encounter explodes into over 30,000 data points, creating a massive validation burden.\n• Despite their expertise, manual review inevitably leads to missed diagnoses and lost revenue. 2. Clinical Impact: \n• Incomplete documentation resulting in revenue leakage.\n• AI models that flag diagnoses without explaining 'why'.\n• Slow review cycles that delay billing and increase denials. 3. Design Challenges: \n• Consolidating all data into a single trusted view.\n• Showing the 'why' behind AI suggestions.\n• Identifying workflows that speed up decision making without reducing accuracy.",
-                    image: "/case-studies/adaptive-drg-whiteboard.jpg"
+                    image: "/case-studies/adaptive-drg-whiteboard.png"
                 },
                 {
                     id: "process",
@@ -77,7 +77,8 @@ export const SITE_DATA = {
                     label: "The Solution",
                     title: "Dynamic Clinical UI",
                     text: "1. Dynamic Clinical Layouts: \n• Moved beyond a single generic view to a dynamic system where the interface changes structure based on the specific clinical condition.\n• Designed tailored workflows for Sepsis, Metabolic Encephalopathy, CHF, and STI to match their unique validation criteria. 2. Evidence-Driven Priority: \n• The UI architecture is determined by the specific clinical data points that impact the DRG assignment.\n• It visually prioritizes the evidence needed to prove or disprove a Primary Diagnosis, shifting the focus from passive review to active validation. 3. Data Dense Visualization: \n• Developed a rich, interactive visualization engine that synthesizes and plots key clinical diagnostic markers over time, allowing for rapid trend identification. 4. Clinical Decision Support: \n• Integrated evidence-based treatment recommendations directly into the physician's workflow to reduce cognitive load and standardize care pathways. 5. Team Collaboration Tools: \n• Enabled seamless care coordination with real-time patient status sharing and structured handoff communication tools between shifting care teams.",
-                    image: "/case-studies/DynamicClinicalUI.png"
+                    image: "",
+                    iframe: "https://www.figma.com/make/pVRbQpux8RNVjRidPx1vyb/Make-it-data-dense?fullscreen=1&t=GjrOgI7BYzLnR6bI-1"
                 },
                 {
                     id: "impact",

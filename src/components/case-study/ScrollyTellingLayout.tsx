@@ -432,7 +432,16 @@ export function ScrollyTellingLayout({ project }: ScrollyTellingLayoutProps) {
                                     </>
                                 ) : (
                                     <>
-                                        {item.data.image && (item.data.image.startsWith('http') || item.data.image.startsWith('/')) ? (
+                                        {item.data.iframe ? (
+                                            <iframe
+                                                src={item.data.iframe}
+                                                width="100%"
+                                                height="800px"
+                                                style={{ border: 'none', borderRadius: '8px' }}
+                                                title={item.data.title}
+                                                allowFullScreen
+                                            />
+                                        ) : item.data.image && (item.data.image.startsWith('http') || item.data.image.startsWith('/')) ? (
                                             <Image
                                                 src={item.data.image}
                                                 alt={item.data.title}
