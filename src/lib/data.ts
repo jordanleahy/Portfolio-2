@@ -78,7 +78,7 @@ export const SITE_DATA = {
                     title: "Dynamic Clinical UI",
                     text: "1. Dynamic Clinical Layouts: \n• Moved beyond a single generic view to a dynamic system where the interface changes structure based on the specific clinical condition.\n• Designed tailored workflows for Sepsis, Metabolic Encephalopathy, CHF, and STI to match their unique validation criteria. 2. Evidence-Driven Priority: \n• The UI architecture is determined by the specific clinical data points that impact the DRG assignment.\n• It visually prioritizes the evidence needed to prove or disprove a Primary Diagnosis, shifting the focus from passive review to active validation. 3. Data Dense Visualization: \n• Developed a rich, interactive visualization engine that synthesizes and plots key clinical diagnostic markers over time, allowing for rapid trend identification. 4. Clinical Decision Support: \n• Integrated evidence-based treatment recommendations directly into the physician's workflow to reduce cognitive load and standardize care pathways. 5. Team Collaboration Tools: \n• Enabled seamless care coordination with real-time patient status sharing and structured handoff communication tools between shifting care teams.",
                     image: "",
-                    iframe: "https://www.figma.com/make/pVRbQpux8RNVjRidPx1vyb/Make-it-data-dense?fullscreen=1&t=GjrOgI7BYzLnR6bI-1"
+                    iframe: "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/make/pVRbQpux8RNVjRidPx1vyb/Make-it-data-dense"
                 },
                 {
                     id: "impact",
