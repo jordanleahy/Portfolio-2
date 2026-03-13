@@ -103,7 +103,7 @@ export const SITE_DATA = {
             subtitle: "PrescriberPoint",
             description: "How I designed an ML & LLM powered prior authorization system that reduced response time from 3 days to 5 minutes, improving patient access to medications.",
             tags: ["PriorAuth", "ML", "Workflow", "Formulary", "Automation"],
-            image: "https://www.jordanleahy.com/case4-prescriber-point.png",
+            image: "/case-studies/case4-prescriber-point.png",
             locked: false,
             password: "design2025",
             slug: "prescriber-point",
@@ -175,7 +175,7 @@ export const SITE_DATA = {
             subtitle: "Definitive Healthcare",
             description: "Led a data-driven redesign to transform navigation chaos into clarity. Partnered with Product Management, Customer Success, and Data Science to restructure information architecture...",
             tags: ["UX Research", "Healthcare SaaS", "Data Visualization", "Enterprise Design"],
-            image: "https://www.jordanleahy.com/case6-definitive-healthcare.png",
+            image: "/case-studies/case6-definitive-healthcare.png",
             locked: false,
             password: "design2025",
             slug: "definitive-healthcare",
@@ -207,14 +207,16 @@ export const SITE_DATA = {
                     label: "The Challenge",
                     title: "Rushed Complexity",
                     text: "1. Historic Debt: \n• Rushed development without proper UX planning created an unstructured data experience filled with duplicate information and navigation chaos. 2. 3 Million Struggles: \n• High page views weren't engagement—they were users lost in navigation.\n• Finding hospital data meant juggling multiple tabs with duplicate metrics. 3. Answers Needed: \n• Users needed summary views that surface insights instead of forcing tab-by-tab discovery.",
-                    image: "/case-studies/definitive-challenge.png"
+                    image: "/case-studies/definitive-challenge.png",
+                    component: "PainPointBubbles"
                 },
                 {
                     id: "process",
                     label: "The Process",
                     title: "Data-Driven Architecture",
                     text: "1. Research & Data Analysis: \n• Combined qualitative interviews with quantitative analytics (3.3M page views) to identify pain points.\n• \"It's very complex and difficult to find what you need.\" — Customer Interview. 2. Information Architecture: \n• Mapped and audited every screen to document structure before consolidating layout.\n• Created comprehensive sitemaps to visualize the simplified flow. 3. High-Fidelity Design: \n• Developed scalable design system components for 500+ customizable metrics and iterated rapidly with product stakeholders using auto-layout and variants.",
-                    image: "/case-studies/definitive-process.png"
+                    image: "/case-studies/definitive-process.png",
+                    component: "UserFlowVisualization"
                 },
                 {
                     id: "solution",

@@ -412,14 +412,14 @@ export function ServicesContent() {
               >
                 <Link
                   href={`/work/${study.slug}`}
-                  className="group block relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-primary/30 transition-all duration-500 aspect-[4/3]"
+                  className="group block relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5 hover:border-primary/30 transition-all duration-500 aspect-[16/9]"
                 >
                   {study.image && (
                     <Image
                       src={study.image}
                       alt={study.title}
                       fill
-                      className="object-cover opacity-40 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
+                      className="object-contain opacity-40 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />

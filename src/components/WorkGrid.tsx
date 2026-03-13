@@ -40,12 +40,12 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
                 {/* Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-                <div className="relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/10 aspect-[16/9] md:aspect-[21/9]">
+                <div className="relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/10 aspect-[16/9]">
                     {/* Dark Overlay Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
 
                     {/* Image with Parallax */}
-                    <motion.div style={{ y }} className="relative w-full h-[120%] -top-[10%]">
+                    <motion.div style={{ y }} className="relative w-full h-full">
                         {project.image ? (
                             <Image
                                 src={project.image}

@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform, useSpring, useInView } from "framer-mo
 import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { PainPointBubbles } from "./PainPointBubbles";
+import { UserFlowVisualization } from "./UserFlowVisualization";
 
 const TOOL_ICONS: Record<string, React.ReactNode> = {
     "Figma": (
@@ -432,7 +434,11 @@ export function ScrollyTellingLayout({ project }: ScrollyTellingLayoutProps) {
                                     </>
                                 ) : (
                                     <>
-                                        {item.data.iframe ? (
+                                        {item.data.component === "PainPointBubbles" ? (
+                                            <PainPointBubbles />
+                                        ) : item.data.component === "UserFlowVisualization" ? (
+                                            <UserFlowVisualization />
+                                        ) : item.data.iframe ? (
                                             <iframe
                                                 src={item.data.iframe}
                                                 width="100%"
