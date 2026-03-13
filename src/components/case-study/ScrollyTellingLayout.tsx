@@ -7,6 +7,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { PainPointBubbles } from "./PainPointBubbles";
 import { UserFlowVisualization } from "./UserFlowVisualization";
+import { DefinitiveRoleCard } from "./DefinitiveRoleCard";
 
 const TOOL_ICONS: Record<string, React.ReactNode> = {
     "Figma": (
@@ -416,7 +417,9 @@ export function ScrollyTellingLayout({ project }: ScrollyTellingLayoutProps) {
                             <div className={`relative w-full bg-neutral-900 shadow-2xl ring-1 ring-white/10 max-h-[80vh] rounded-xl overflow-hidden ${item.type === 'team' ? 'aspect-video' : ''}`}>
                                 {item.type === 'team' ? (
                                     <>
-                                        {item.data.image ? (
+                                        {item.data.component === "DefinitiveRoleCard" ? (
+                                            <DefinitiveRoleCard />
+                                        ) : item.data.image ? (
                                             <Image
                                                 src={item.data.image}
                                                 alt="The Team"

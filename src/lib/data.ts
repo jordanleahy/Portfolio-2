@@ -199,7 +199,8 @@ export const SITE_DATA = {
                     "Design system for 500+ metrics",
                     "Search & Filtering system"
                 ],
-                tools: ["Figma", "Pendo", "Jira"]
+                tools: ["Figma", "Pendo", "Jira"],
+                component: "DefinitiveRoleCard"
             },
             sections: [
                 {
