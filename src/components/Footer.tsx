@@ -17,7 +17,6 @@ export function Footer() {
 
                 <div className="flex gap-8 text-sm font-mono text-muted-foreground">
                     <Link href={SITE_DATA.footer.linkedin} className="hover:text-secondary transition-colors uppercase tracking-wider">LinkedIn</Link>
-                    <Link href="#" className="hover:text-secondary transition-colors uppercase tracking-wider">Twitter</Link>
                     <span className="opacity-50">© {new Date().getFullYear()} Jordan Leahy</span>
                 </div>
             </div>
